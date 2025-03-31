@@ -57,7 +57,7 @@ def handle_add_email(call):
 
 def get_email(message):
     email = message.text
-    bot.send_message(message.chat.id, "يرجى إدخال كلمة مرور التطبيقات  الخاصة ببريدك الإلكتروني اذا م تعرف راسلني @i7il1l :")
+    bot.send_message(message.chat.id, "يرجى إدخال كلمة مرور التطبيقات  الخاصة ببريدك الإلكتروني اذا م تعرف راسلني @senzir1 :")
     bot.register_next_step_handler(message, get_password, email)
 
 def get_password(message, email):
