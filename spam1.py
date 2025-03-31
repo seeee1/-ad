@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 import telebot, smtplib, json, os, time
 
 MAX_EMAILS = 8 #عدد الايميلات حط تحت 10
-TOKEN = "7119512825:AAFpaEobu2-kTHonYvoWyVRF48GCHt6pXV8"
+TOKEN = "7960086877:AAHo4cLvQP2AjbJpaoY_ftHULF6gwMFI53A"
 bot = telebot.TeleBot(TOKEN)
 
 def load_users():
@@ -183,7 +183,7 @@ def handle_delete_email(call):
 
 @bot.message_handler(commands=['id'])
 def handle_id(message):
-    if message.from_user.id == 6582037567: #ايديك
+    if message.from_user.id == 7422264678: #ايديك
         bot.send_message(message.chat.id, "حسناً الان ارسل الايدي لتفعيله")
         bot.register_next_step_handler(message, get_user_id)
 
