@@ -33,7 +33,7 @@ def save_emails(data):
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     users = load_users()
-    if str(message.from_user.id) in users or message.from_user.id == 6582037567: #ايديك
+    if str(message.from_user.id) in users or message.from_user.id == 7422264678: #ايديك
         markup = InlineKeyboardMarkup()
         add_email_button = InlineKeyboardButton("اضف ايميل", callback_data="add_email")
         send_email_button = InlineKeyboardButton("إرسال رسالة", callback_data="send_email")
@@ -41,7 +41,7 @@ def send_welcome(message):
         markup.add(add_email_button, send_email_button)
         markup.add(view_emails_button)
         bot.send_message(message.chat.id, "أهلاً بك في البوت!\n\nلاضافة ايميل اضغط اضف ايميل\nلإرسال رسالة اضغط ارسال رسالة", reply_markup=markup)
-    else:bot.send_message(message.chat.id, "عذراً انت لم  تشترك بالبوت! ، للاشتراك تواصل مع @i7il1l ")
+    else:bot.send_message(message.chat.id, "عذراً انت لم  تشترك بالبوت! ، للاشتراك تواصل مع @senzir1 ")
 
 @bot.callback_query_handler(func=lambda call: call.data == "add_email")
 def handle_add_email(call):
